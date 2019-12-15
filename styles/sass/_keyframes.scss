@@ -1,3 +1,24 @@
 
 // Animation keyframes SCSS
 
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes move {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(5px);
+        opacity: 0;
+    }
+}

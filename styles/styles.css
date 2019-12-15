@@ -203,6 +203,54 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   --circleColor: #21215a;
 }
 
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes move {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+    opacity: 0;
+  }
+}
+
+@keyframes move {
+  from {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+    opacity: 0;
+  }
+}
+
 html {
   font-size: 125%;
   scroll-behavior: smooth;
@@ -253,6 +301,74 @@ a {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   position: relative;
+}
+
+h1 {
+  color: var(--fontColor);
+  font-size: calc(2.5rem + 5vw);
+  width: 95%;
+  position: relative;
+  z-index: 1;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  background-color: var(--secondBgColor);
+  z-index: -1;
+}
+
+@media (max-width: 1100px) {
+  h1::after {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+h2 {
+  color: var(--primaryColor);
+  position: relative;
+  font-size: 1rem;
+  text-align: start;
+}
+
+h2:after {
+  position: absolute;
+  content: "";
+  width: 40%;
+  height: 2px;
+  background-color: var(--primaryColor);
+  right: -60px;
+  top: 50%;
+  border-radius: 20px;
+}
+
+@media (max-width: 700px) {
+  h2:after {
+    width: 20%;
+    min-width: 50px;
+  }
+}
+
+h3 {
+  color: var(--fontColor);
+  font-size: calc(2rem + 2vw);
+  padding: 20px;
+}
+
+h4 {
+  position: relative;
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: var(--fontColor);
+  font-size: 1.6rem;
 }
 
 .wrapper {
@@ -491,12 +607,6 @@ input.menu:checked + label.menu + ul {
   font-size: 2rem;
 }
 
-.chevronContainer {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-}
-
 .headerInfo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -531,6 +641,12 @@ input.menu:checked + label.menu + ul {
 
 .headerInfo p {
   width: 100%;
+}
+
+.chevronContainer {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
 }
 
 .chevronDown {
@@ -607,74 +723,6 @@ input.menu:checked + label.menu + ul {
   color: #fafaff;
 }
 
-h1 {
-  color: var(--fontColor);
-  font-size: calc(2.5rem + 5vw);
-  width: 95%;
-  position: relative;
-  z-index: 1;
-}
-
-h1::after {
-  content: "";
-  position: absolute;
-  width: 450px;
-  height: 450px;
-  border-radius: 50%;
-  top: 50%;
-  right: 50%;
-  -webkit-transform: translate(50%, -50%);
-          transform: translate(50%, -50%);
-  background-color: var(--secondBgColor);
-  z-index: -1;
-}
-
-@media (max-width: 1100px) {
-  h1::after {
-    width: 300px;
-    height: 300px;
-  }
-}
-
-h2 {
-  color: var(--primaryColor);
-  position: relative;
-  font-size: 1rem;
-  text-align: start;
-}
-
-h2:after {
-  position: absolute;
-  content: "";
-  width: 40%;
-  height: 2px;
-  background-color: var(--primaryColor);
-  right: -60px;
-  top: 50%;
-  border-radius: 20px;
-}
-
-@media (max-width: 700px) {
-  h2:after {
-    width: 20%;
-    min-width: 50px;
-  }
-}
-
-h3 {
-  color: var(--fontColor);
-  font-size: calc(2rem + 2vw);
-  padding: 20px;
-}
-
-h4 {
-  position: relative;
-  padding: 5px 10px;
-  border-radius: 20px;
-  color: var(--fontColor);
-  font-size: 1.6rem;
-}
-
 section {
   min-height: 100vh;
   padding: 80px 0;
@@ -719,69 +767,6 @@ section {
   z-index: 90;
 }
 
-.aboutMeMain .aboutMeContainer, .projectsMain .aboutMeContainer, .skillsMain .aboutMeContainer, .contactMeMain .aboutMeContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.aboutMeMain .triangle, .projectsMain .triangle, .skillsMain .triangle, .contactMeMain .triangle {
-  left: 20%;
-  top: 0;
-  border-top: 120px solid var(--buttonColor);
-}
-
-@media (max-width: 700px) {
-  .aboutMeMain .triangle, .projectsMain .triangle, .skillsMain .triangle, .contactMeMain .triangle {
-    top: 70px;
-    left: 4%;
-    right: none;
-    border-top: 50px solid var(--buttonColor);
-    -webkit-transform-origin: top;
-            transform-origin: top;
-  }
-}
-
-.aboutMeMain .imageContainer, .projectsMain .imageContainer, .skillsMain .imageContainer, .contactMeMain .imageContainer {
-  width: 300px;
-  margin: 40px;
-  position: relative;
-}
-
-.aboutMeMain .imageContainer img, .projectsMain .imageContainer img, .skillsMain .imageContainer img, .contactMeMain .imageContainer img {
-  background-color: #fafaff;
-}
-
-.aboutMeMain .imageContainer::after, .projectsMain .imageContainer::after, .skillsMain .imageContainer::after, .contactMeMain .imageContainer::after {
-  border: 200px solid transparent;
-  border-right-color: var(--secondaryColor);
-  border-bottom: 0;
-  width: 0;
-  content: "";
-  position: absolute;
-  right: -20px;
-  bottom: -20px;
-}
-
-.aboutMeMain .imageContainer::before, .projectsMain .imageContainer::before, .skillsMain .imageContainer::before, .contactMeMain .imageContainer::before {
-  border: 180px solid transparent;
-  border-right-color: var(--primaryColor);
-  z-index: 2;
-  border-bottom: 0;
-  bottom: 0px;
-  width: 0;
-  content: "";
-  position: absolute;
-  right: -20px;
-  bottom: -20px;
-}
-
 .aboutMeMain button, .projectsMain button, .skillsMain button, .contactMeMain button {
   border: none;
   padding: 10px 20px;
@@ -809,6 +794,19 @@ section {
   padding-left: 5px;
 }
 
+.projectsMain, .contactMeMain {
+  position: relative;
+  margin: 50px 0;
+}
+
+.projectsMain ul, .contactMeMain ul {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
 .aboutMeInfo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -826,17 +824,33 @@ section {
   width: 100%;
 }
 
-.projectsMain, .contactMeMain {
-  position: relative;
-  margin: 50px 0;
+.aboutMeContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.projectsMain ul, .contactMeMain ul {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
+.aboutMe .triangle {
+  left: 20%;
+  top: 0;
+  border-top: 120px solid var(--buttonColor);
+}
+
+@media (max-width: 700px) {
+  .aboutMe .triangle {
+    top: 70px;
+    left: 4%;
+    right: none;
+    border-top: 50px solid var(--buttonColor);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+  }
 }
 
 .projectContainer {
@@ -1177,52 +1191,4 @@ footer p {
   text-align: center;
   border-top: solid 1px var(--fontColor);
   padding: 5px;
-}
-
-@-webkit-keyframes rotate {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes rotate {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes move {
-  from {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: translateY(5px);
-            transform: translateY(5px);
-    opacity: 0;
-  }
-}
-
-@keyframes move {
-  from {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: translateY(5px);
-            transform: translateY(5px);
-    opacity: 0;
-  }
 }
