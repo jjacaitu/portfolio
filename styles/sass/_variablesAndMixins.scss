@@ -56,3 +56,9 @@ $thirdFont: 'Montserrat', sans-serif;
     }
 };
 
+@mixin mq-phone {
+    @media (max-width:550px) {
+        @content
+    }
+};
+

@@ -80,8 +80,31 @@ header, .projects,.contactMe  {
 }
 
 nav {
+    min-height: 60px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    ul {
+        @include mq-small-desktop{
+            width: 75%;
+        }
+
+        @include mq-phone {
+            position: fixed;
+            transition: all 0.5s;
+            right: -100%;
+            top: 0;
+            bottom: 0;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px;
+            width: 30%;
+            background-color: var(--primaryColor);
+            color: #fafaff;
+            z-index: 3;
+        }
+    }
 
     a{
         &:after {
@@ -94,15 +117,24 @@ nav {
         left: 0;
         border-radius: 20px;
         transition: all 0.5s;
+
+            @include mq-phone {
+                background-color: #fafaff;
+            }
         }
 
         &:hover {
             color:  var(--primaryColor);
 
+            @include mq-phone {
+                color: #fafaff;
+            }
+
             &::after {
                 width: 100%;
             }
         }
+
 
     }
            
@@ -114,6 +146,12 @@ ul {
     width: 50%;
     justify-content: space-around;
     color:  var(--fontColor);
+
+    li {
+        @include mq-phone {
+            margin-bottom: 20px;
+        }
+    }
     
 }
 
@@ -149,15 +187,62 @@ input[type="checkbox"] {
     display: none;
 }
 
-input:checked+.switch::after {
+input.switch:checked + label.switch::after {
     left: 0;
+}
+
+label.menu {
+  display: none;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 4;
+  border-radius: 10px;
+  background-color: var(--bgColor);
+  padding: 5px;
+
+  @include mq-phone {
+      display: block;
+  }
+  
+}
+
+label.menu:after, 
+label.menu:before, 
+.menu div {
+  background-color: var(--primaryColor);
+  border-radius: 3px;
+  content: '';
+  display: block;
+  height: 5px;
+  margin: 7px 0;
+  transition: all .2s ease-in-out;
+}
+
+input.menu:checked + label.menu::before {
+  transform: translateY(12px) rotate(135deg);
+}
+
+input.menu:checked + label.menu::after {
+  transform: translateY(-12px) rotate(-135deg);
+}
+
+input.menu:checked + label.menu div {
+  transform: scale(0);
+}
+
+input.menu:checked + label.menu + ul {
+  right: 0;
+  
 }
 
 .headerMain {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 80vh;
+    min-height: 600px;
     @include mq-small-tablet {
         flex-direction: column;
     }
@@ -190,7 +275,7 @@ input:checked+.switch::after {
 
     @include mq-small-tablet {
         width: 100%;
-        margin-top: 30px;
+        margin-top: 15px;
     }
 
     p {
@@ -274,8 +359,8 @@ input:checked+.switch::after {
 
 h1 {
     color: var(--fontColor);
-    font-size: calc(2.5rem + 4vw);
-    width: 100%;
+    font-size: calc(2.5rem + 5vw);
+    width: 95%;
     position: relative;
     z-index: 1;
 
@@ -327,7 +412,7 @@ h2:after {
 
 h3 {
     color: var(--fontColor);
-    font-size: 3rem;
+    font-size: calc(2rem + 2vw);
     padding: 20px;
 }
 
@@ -391,13 +476,13 @@ section {
     }
 
     .triangle {
-        left: 25%;
+        left: 20%;
         top: 0;
         border-top: 120px solid var(--buttonColor);
 
         @include mq-small-tablet {
-        top: 60px;
-        left: 10%;
+        top: 70px;
+        left: 4%;
         right: none;
         border-top: 50px solid var(--buttonColor);
         transform-origin: top;

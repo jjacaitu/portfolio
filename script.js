@@ -1,5 +1,5 @@
 // Get the toggleSwitch element ("checkbox")
-const toggleSwitch = document.querySelector('input[type="checkbox"]');
+const toggleSwitch = document.querySelector('input[type="checkbox"].switch');
 
 // Set the checkbox to false ("not checked")
 toggleSwitch.checked = false;

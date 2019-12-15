@@ -286,12 +286,45 @@ header, .projects, .contactMe {
 }
 
 nav {
+  min-height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1100px) {
+  nav ul {
+    width: 75%;
+  }
+}
+
+@media (max-width: 550px) {
+  nav ul {
+    position: fixed;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    right: -100%;
+    top: 0;
+    bottom: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 10px;
+    width: 30%;
+    background-color: var(--primaryColor);
+    color: #fafaff;
+    z-index: 3;
+  }
 }
 
 nav a:after {
@@ -307,8 +340,20 @@ nav a:after {
   transition: all 0.5s;
 }
 
+@media (max-width: 550px) {
+  nav a:after {
+    background-color: #fafaff;
+  }
+}
+
 nav a:hover {
   color: var(--primaryColor);
+}
+
+@media (max-width: 550px) {
+  nav a:hover {
+    color: #fafaff;
+  }
 }
 
 nav a:hover::after {
@@ -323,6 +368,12 @@ ul {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   color: var(--fontColor);
+}
+
+@media (max-width: 550px) {
+  ul li {
+    margin-bottom: 20px;
+  }
 }
 
 i {
@@ -357,8 +408,60 @@ input[type="checkbox"] {
   display: none;
 }
 
-input:checked + .switch::after {
+input.switch:checked + label.switch::after {
   left: 0;
+}
+
+label.menu {
+  display: none;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  z-index: 4;
+  border-radius: 10px;
+  background-color: var(--bgColor);
+  padding: 5px;
+}
+
+@media (max-width: 550px) {
+  label.menu {
+    display: block;
+  }
+}
+
+label.menu:after,
+label.menu:before,
+.menu div {
+  background-color: var(--primaryColor);
+  border-radius: 3px;
+  content: '';
+  display: block;
+  height: 5px;
+  margin: 7px 0;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+input.menu:checked + label.menu::before {
+  -webkit-transform: translateY(12px) rotate(135deg);
+          transform: translateY(12px) rotate(135deg);
+}
+
+input.menu:checked + label.menu::after {
+  -webkit-transform: translateY(-12px) rotate(-135deg);
+          transform: translateY(-12px) rotate(-135deg);
+}
+
+input.menu:checked + label.menu div {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+input.menu:checked + label.menu + ul {
+  right: 0;
 }
 
 .headerMain {
@@ -371,7 +474,7 @@ input:checked + .switch::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 80vh;
+  min-height: 600px;
 }
 
 @media (max-width: 700px) {
@@ -422,7 +525,7 @@ input:checked + .switch::after {
 @media (max-width: 700px) {
   .headerInfo {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 15px;
   }
 }
 
@@ -506,8 +609,8 @@ input:checked + .switch::after {
 
 h1 {
   color: var(--fontColor);
-  font-size: calc(2.5rem + 4vw);
-  width: 100%;
+  font-size: calc(2.5rem + 5vw);
+  width: 95%;
   position: relative;
   z-index: 1;
 }
@@ -560,7 +663,7 @@ h2:after {
 
 h3 {
   color: var(--fontColor);
-  font-size: 3rem;
+  font-size: calc(2rem + 2vw);
   padding: 20px;
 }
 
@@ -629,15 +732,15 @@ section {
 }
 
 .aboutMeMain .triangle, .projectsMain .triangle, .skillsMain .triangle, .contactMeMain .triangle {
-  left: 25%;
+  left: 20%;
   top: 0;
   border-top: 120px solid var(--buttonColor);
 }
 
 @media (max-width: 700px) {
   .aboutMeMain .triangle, .projectsMain .triangle, .skillsMain .triangle, .contactMeMain .triangle {
-    top: 60px;
-    left: 10%;
+    top: 70px;
+    left: 4%;
     right: none;
     border-top: 50px solid var(--buttonColor);
     -webkit-transform-origin: top;
