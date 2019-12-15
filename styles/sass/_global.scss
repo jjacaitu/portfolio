@@ -696,6 +696,10 @@ section {
         display: flex;
         flex-direction: column;
         width: 80%;
+
+        @include mq-small-tablet {
+            width: 100%;
+        }
         
         input, textarea {
             margin-bottom: 20px;
