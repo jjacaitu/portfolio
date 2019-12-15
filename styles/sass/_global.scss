@@ -26,10 +26,18 @@ p, h1, li,ul, h2, h3, h4 {
 
 p {
     line-height: 35px;
+
+    @include mq-small-tablet {
+        font-size: 0.8rem;
+    }
 }
 
 ul {
     list-style: none;
+
+    @include mq-small-tablet {
+        font-size: 0.8rem;
+    }
     
 }
 
@@ -47,6 +55,14 @@ a {
     width: 75%;
     max-width: 1500px;
     margin: 0 auto;
+
+    @include mq-tablet {
+        width: 85%;
+    }
+
+    @include mq-small-tablet {
+        width: 90%;
+    }
 }
 
 span {
@@ -96,7 +112,7 @@ ul {
     display: flex;
     width: 50%;
     justify-content: space-around;
-    color:  var(--middleColor);
+    color:  var(--fontColor);
     
 }
 
@@ -141,6 +157,9 @@ input:checked+.switch::after {
     align-items: center;
     justify-content: center;
     min-height: 80vh;
+    @include mq-small-tablet {
+        flex-direction: column;
+    }
 
     i {
         margin-top: 100px;
@@ -158,14 +177,27 @@ input:checked+.switch::after {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: flex-start;
     align-self: flex-end;
 
-    div {
-        width: 75%;
+    // div {
+    width: 23%;
+
+    @include mq-small-desktop {
+        width: 40%;
+    }
+
+    @include mq-small-tablet {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    p {
+        width: 100%;
+    }
 
         
-    }
+    // }
 }
 
 .chevronDown {
@@ -202,6 +234,13 @@ input:checked+.switch::after {
     transform: rotate(25deg);
     // opacity: 0.2;
     animation: rotate infinite 15s both linear ;
+
+    @include mq-small-tablet {
+        top: 60%;
+        right: 20%;
+        border-top: 50px solid;
+        transform-origin: top;
+    }
 }
 
 .circle{
@@ -212,6 +251,11 @@ input:checked+.switch::after {
     position: absolute;
     right: 20%;
     top: 45%;
+
+    @include mq-small-tablet {
+        top: 60%;
+        right: 10%;
+    }
     
 }
 
@@ -229,8 +273,8 @@ input:checked+.switch::after {
 
 h1 {
     color: var(--fontColor);
-    font-size: 6rem;
-    width: 98%;
+    font-size: calc(2.5rem + 4vw);
+    width: 100%;
     position: relative;
     z-index: 1;
 
@@ -243,9 +287,13 @@ h1 {
         top: 50%;
         right: 50%;
         transform: translate(50%, -50%);
-        
         background-color: var(--secondBgColor);
         z-index: -1;
+
+        @include mq-small-desktop {
+            width: 300px;
+            height: 300px;
+        }
     }
 }
 
@@ -253,6 +301,8 @@ h2 {
     color:  var(--primaryColor);
     position: relative;
     font-size: 1rem;
+    text-align: start;
+    // width: 100%;
    
 }
 
@@ -262,9 +312,16 @@ h2:after {
     width: 40%;
     height: 2px;
     background-color:  var(--primaryColor);
-    right: -50%;
+    right: -60px;
     top: 50%;
     border-radius: 20px;
+
+    @include mq-small-tablet {
+        width: 20%;
+        min-width: 50px;
+        // right: 0;
+        // margin-top: 40px;
+    }
 }
 
 h3 {
@@ -336,6 +393,14 @@ section {
         left: 25%;
         top: 0;
         border-top: 120px solid var(--buttonColor);
+
+        @include mq-small-tablet {
+        top: 60px;
+        left: 10%;
+        right: none;
+        border-top: 50px solid;
+        transform-origin: top;
+    }
     }
 
     .imageContainer {
@@ -376,6 +441,8 @@ section {
         }
 
     }
+
+    
     
     button {
         border: none;
@@ -412,8 +479,6 @@ section {
 
 }
 
-
-
 .projectsMain, .contactMeMain {
     position: relative;
     margin: 50px 0;
@@ -425,14 +490,24 @@ section {
 }
 
 .projectContainer {
-    // background-color: var(--middleColor);
     padding: 30px;
     display: flex;
+
+    @include mq-small-desktop {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
     &:nth-child(even) .projectInfo{
         order: -1;
         padding-left: 0;
         padding-right: 50px;
+
+        @include mq-small-desktop {
+        order: 0;
+        padding-right: 0;
+    }
     }
     
     
@@ -441,6 +516,10 @@ section {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @include mq-small-desktop {
+        width: 60%;
+    }
 
         img {
             width: 100%;
@@ -461,10 +540,15 @@ section {
     flex-direction: column;
     padding-left: 50px;
 
+    @include mq-small-desktop {
+        width: 100%;
+        padding-left: 0;
+    }
+
     
 
     ul {
-        width: 90%;
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -517,7 +601,11 @@ section {
         display: flex;
         align-items: center;
         justify-content: space-around;
-        width: 50%;
+        // width: 50%;
+
+        a:first-child {
+            margin-right: 10px;
+        }
 
     }
     
@@ -564,7 +652,11 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 100%;
+
+    @include mq-small-tablet {
+        flex-direction: column;
+    }
 
     .contactInfo {
         display: flex;
@@ -573,10 +665,23 @@ section {
         justify-content: space-around;
         align-items: center;
         height: 100%;
+        margin-right: 40px;
+
+        @include mq-small-tablet {
+            flex-direction: row;
+            width: 100%;
+            margin-right: 0;
+        }
+
+        
 
         i {
             margin-bottom: 30px;
             font-size: 3rem;
+
+            @include mq-small-tablet {
+                margin-right: 10px;
+            }
         }
 
         

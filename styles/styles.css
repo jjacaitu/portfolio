@@ -197,8 +197,8 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   --fontColor: #222222;
   --buttonColor: #026983;
   --buttonIcon: #fafaff;
-  --bgColor:  rgb(244, 244, 245);
-  --secondBgColor:white;
+  --bgColor:  rgb(226, 226, 226);
+  --secondBgColor:rgb(245, 245, 245);
   --middleColor: #19192e;
   --circleColor: #21215a;
 }
@@ -230,8 +230,20 @@ p {
   line-height: 35px;
 }
 
+@media (max-width: 700px) {
+  p {
+    font-size: 0.8rem;
+  }
+}
+
 ul {
   list-style: none;
+}
+
+@media (max-width: 700px) {
+  ul {
+    font-size: 0.8rem;
+  }
 }
 
 a {
@@ -246,6 +258,18 @@ a {
   width: 75%;
   max-width: 1500px;
   margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+  .wrapper {
+    width: 85%;
+  }
+}
+
+@media (max-width: 700px) {
+  .wrapper {
+    width: 90%;
+  }
 }
 
 span {
@@ -297,7 +321,7 @@ ul {
   width: 50%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  color: var(--middleColor);
+  color: var(--fontColor);
 }
 
 i {
@@ -349,6 +373,15 @@ input:checked + .switch::after {
   min-height: 80vh;
 }
 
+@media (max-width: 700px) {
+  .headerMain {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .headerMain i {
   margin-top: 100px;
   font-size: 2rem;
@@ -371,15 +404,29 @@ input:checked + .switch::after {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  width: 23%;
 }
 
-.headerInfo div {
-  width: 75%;
+@media (max-width: 1100px) {
+  .headerInfo {
+    width: 40%;
+  }
+}
+
+@media (max-width: 700px) {
+  .headerInfo {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
+.headerInfo p {
+  width: 100%;
 }
 
 .chevronDown {
@@ -422,6 +469,16 @@ input:checked + .switch::after {
           animation: rotate infinite 15s both linear;
 }
 
+@media (max-width: 700px) {
+  .triangle {
+    top: 60%;
+    right: 20%;
+    border-top: 50px solid;
+    -webkit-transform-origin: top;
+            transform-origin: top;
+  }
+}
+
 .circle {
   border-radius: 50%;
   background-color: var(--circleColor);
@@ -430,6 +487,13 @@ input:checked + .switch::after {
   position: absolute;
   right: 20%;
   top: 45%;
+}
+
+@media (max-width: 700px) {
+  .circle {
+    top: 60%;
+    right: 10%;
+  }
 }
 
 .logo {
@@ -441,8 +505,8 @@ input:checked + .switch::after {
 
 h1 {
   color: var(--fontColor);
-  font-size: 6rem;
-  width: 98%;
+  font-size: calc(2.5rem + 4vw);
+  width: 100%;
   position: relative;
   z-index: 1;
 }
@@ -461,10 +525,18 @@ h1::after {
   z-index: -1;
 }
 
+@media (max-width: 1100px) {
+  h1::after {
+    width: 300px;
+    height: 300px;
+  }
+}
+
 h2 {
   color: var(--primaryColor);
   position: relative;
   font-size: 1rem;
+  text-align: start;
 }
 
 h2:after {
@@ -473,9 +545,16 @@ h2:after {
   width: 40%;
   height: 2px;
   background-color: var(--primaryColor);
-  right: -50%;
+  right: -60px;
   top: 50%;
   border-radius: 20px;
+}
+
+@media (max-width: 700px) {
+  h2:after {
+    width: 20%;
+    min-width: 50px;
+  }
 }
 
 h3 {
@@ -552,6 +631,17 @@ section {
   left: 25%;
   top: 0;
   border-top: 120px solid var(--buttonColor);
+}
+
+@media (max-width: 700px) {
+  .aboutMeMain .triangle, .projectsMain .triangle, .skillsMain .triangle, .contactMeMain .triangle {
+    top: 60px;
+    left: 10%;
+    right: none;
+    border-top: 50px solid;
+    -webkit-transform-origin: top;
+            transform-origin: top;
+  }
 }
 
 .aboutMeMain .imageContainer, .projectsMain .imageContainer, .skillsMain .imageContainer, .contactMeMain .imageContainer {
@@ -652,12 +742,36 @@ section {
   display: flex;
 }
 
+@media (max-width: 1100px) {
+  .projectContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .projectContainer:nth-child(even) .projectInfo {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
   padding-left: 0;
   padding-right: 50px;
+}
+
+@media (max-width: 1100px) {
+  .projectContainer:nth-child(even) .projectInfo {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    padding-right: 0;
+  }
 }
 
 .projectContainer .projectsImages {
@@ -671,6 +785,12 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 1100px) {
+  .projectContainer .projectsImages {
+    width: 60%;
+  }
 }
 
 .projectContainer .projectsImages img {
@@ -696,8 +816,15 @@ section {
   padding-left: 50px;
 }
 
+@media (max-width: 1100px) {
+  .projectInfo {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
 .projectInfo ul {
-  width: 90%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -761,7 +888,10 @@ section {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 50%;
+}
+
+.projectInfo div a:first-child {
+  margin-right: 10px;
 }
 
 .skillsMain {
@@ -828,7 +958,16 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 80%;
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .contactFormAndInfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .contactFormAndInfo .contactInfo {
@@ -846,11 +985,29 @@ section {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+  margin-right: 40px;
+}
+
+@media (max-width: 700px) {
+  .contactFormAndInfo .contactInfo {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    margin-right: 0;
+  }
 }
 
 .contactFormAndInfo .contactInfo i {
   margin-bottom: 30px;
   font-size: 3rem;
+}
+
+@media (max-width: 700px) {
+  .contactFormAndInfo .contactInfo i {
+    margin-right: 10px;
+  }
 }
 
 .contactFormAndInfo i {

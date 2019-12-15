@@ -28,8 +28,8 @@ $thirdFont: 'Montserrat', sans-serif;
     --fontColor: #222222;
     --buttonColor: #026983;
     --buttonIcon: #fafaff;
-    --bgColor:  rgb(244, 244, 245);
-    --secondBgColor:white;
+    --bgColor:  rgb(226, 226, 226);
+    --secondBgColor:rgb(245, 245, 245);
     --middleColor: #19192e;
     --circleColor: #21215a;
 }
@@ -39,19 +39,19 @@ $thirdFont: 'Montserrat', sans-serif;
 // Mixins for media queries
 
 @mixin mq-small-desktop {
-    @media (max-width:1150px) {
+    @media (max-width:1100px) {
         @content
     }
 };
 
 @mixin mq-tablet {
-    @media (max-width:950px) {
+    @media (max-width:800px) {
         @content
     }
 };
 
-@mixin mq-phone {
-    @media (max-width:600px) {
+@mixin mq-small-tablet {
+    @media (max-width:700px) {
         @content
     }
 };
