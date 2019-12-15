@@ -56,8 +56,3 @@ $thirdFont: 'Montserrat', sans-serif;
     }
 };
 
-@mixin mq-height {
-    @media (max-height:650px){
-        @content
-    }
-};

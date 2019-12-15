@@ -472,8 +472,8 @@ input:checked + .switch::after {
 @media (max-width: 700px) {
   .triangle {
     top: 60%;
-    right: 20%;
-    border-top: 50px solid;
+    right: 18%;
+    border-top: 50px solid var(--buttonColor);
     -webkit-transform-origin: top;
             transform-origin: top;
   }
@@ -638,7 +638,7 @@ section {
     top: 60px;
     left: 10%;
     right: none;
-    border-top: 50px solid;
+    border-top: 50px solid var(--buttonColor);
     -webkit-transform-origin: top;
             transform-origin: top;
   }
@@ -757,6 +757,13 @@ section {
   }
 }
 
+@media (max-width: 700px) {
+  .projectContainer {
+    padding: 0;
+    margin-top: 60px;
+  }
+}
+
 .projectContainer:nth-child(even) .projectInfo {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
@@ -790,6 +797,12 @@ section {
 @media (max-width: 1100px) {
   .projectContainer .projectsImages {
     width: 60%;
+  }
+}
+
+@media (max-width: 700px) {
+  .projectContainer .projectsImages {
+    width: 100%;
   }
 }
 
@@ -934,6 +947,12 @@ section {
           justify-content: center;
   margin-bottom: 20px;
   padding: 0 10px;
+}
+
+@media (max-width: 700px) {
+  .skillsMain ul li {
+    padding: 0;
+  }
 }
 
 .skillsMain img {
