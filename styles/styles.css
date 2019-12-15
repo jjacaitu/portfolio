@@ -206,6 +206,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 html {
   font-size: 125%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
