@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="https://kit.fontawesome.com/d6f0115eb5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Juan Acaiturri-Villa</title>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <nav>
+                <p class="logo">J.</p>
+                <ul>
+                    <li><a href="#aboutMe">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contactMe">Contact me</a></li>
+                </ul>
+                <input  type="checkbox" name="" id="darkLightSwitch">
+                <label class="switch" for="darkLightSwitch"></label>
+            </nav>
+            <div class="headerMain">
+                <div>
+                    <h1>Juan Acaiturri-Villa</h1>
+                    <!-- <img src="./image.png" alt=""> -->
+                    <ul>
+                        <li><a href="#"><i class="fab fa-github-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+        
+                </div>
+                <div class="headerInfo">
+                    <div>
+                        <h2>Front End Web Developer</h2>
+                        <p>Based in Toronto, always looking to learn new things! </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="triangle"></div>
+            <div class="circle"></div>
+            <div class="bigCircle"></div>
+            <a class="chevronContainer" href="#aboutMe">
+                <!-- <i class="fas fa-chevron-down chevronDown"></i> -->
+                <i class="fas fa-chevron-down chevronDown"></i>
+                <i class="fas fa-chevron-down chevronDown"></i>
+            </a>
+        </div>
+    </header>
+    <main>
+        <section class="aboutMe" id="aboutMe">
+            <div class="wrapper">
+                
+                <div class="aboutMeMain" data-aos="fade-up">
+                    <h2>About Me</h2>
+                    <h3>Hi!</h3>
+                    <div class="triangle"></div>
+                    <!-- <div class="circle"></div> -->
+                    <div class="aboutMeContainer">
+
+                        
+                        <div class="aboutMeInfo">
+                            
+                            <p>Hi! I’m <span>Juan</span>, a front-end developer based in Toronto and  a proud graduate of Juno College of Technology. I have seen from first hand how a well thought and created app can have a huge impact in businesses and people which is why I am so passionate about <span>creating</span> things that help solve everyday people's problems.</p>
+                                
+                            <p>I combine my experience in <span>Business Administration</span> and my production management background with my <span>problem-solving</span> skills to build unique, creative and useful applications that are <span>responsive and accesible</span> for all users. I consider myself as a self-motivated and curious <span>learner</span> that is always looking for better and new ways of doing things.</p>
+    
+                            <p>Besides coding I am very passionate about traveling and getting to know new places and cultures. I love
+                            spending time with my wife and my dog Simba and if I am not coding somewhere, I am probably playing videogames, at the movies with my wife or watching a Barcelona soccer game.</p>
+    
+                            <button>Download Resume <i class="fas fa-file-download"></i></button>
+    
+                        </div>
+                        <!-- <div class="imageContainer">
+                            <img src="./image.png" alt="">
+                        </div> -->
+                    </div>
+                    
+                </div>
+            </div>
+
+        </section>
+        <section class="projects" id="projects">
+            <div class="wrapper">
+                <div class="projectsMain"  data-aos="fade-up">
+                    <h2>Projects</h2>
+                    <h3>My Work</h3>
+                    <ul>
+                        <li class="projectContainer"  data-aos="fade-right">
+                            <div class="projectsImages">
+                                <img src="./assets/interpreter.png" alt="">
+                                
+                            </div>
+                            <div class="projectInfo">
+                                <h4>Interpreter</h4>
+                                <ul>
+                                    <li>React</li>
+                                    <li>Firebase</li>
+                                    <li>RestFul API</li>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                </ul>
+                                <p>My favourite project so far! A text messaging aplication where you don't have to worry about speaking the same language as the other users. All the messages you recieve will be translated to your selected language, and if words aren't enough, you can also send gifs.</p>
+                                <div>
+                                    <a href="https://jjacaitu.github.io/noBarrierChat/" target="__blank">Live <i class="fas fa-external-link-alt"></i></a>
+                                    <a href="https://github.com/jjacaitu/noBarrierChat" target="__blank">Github <i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="projectContainer"  data-aos="fade-left">
+                            <div class="projectsImages">
+                                <img src="./assets/furiendFinder.png" alt="">
+                        
+                            </div>
+                            <div class="projectInfo">
+                                <h4>Furiend Finder</h4>
+                                <ul>
+                                    <li>Pair Programming</li>
+                                    <li>JavaScript</li>
+                                    <li>jQuery</li>
+                                    <li>RestFul API</li>
+                                    <li>HTML</li>
+                                    <li>SASS</li>
+                                </ul>
+                                <p>Built with my friend Negin Sauermann, this app lets you search for a dog or a cat in a 50 km radious from your city and gives you additional information about the breed of your future friend. Created using 4 different APIS and geolocation.</p>
+                                <div>
+                                    <a href="https://nejuaning.github.io/furiendFinder/" target="__blank">Live <i class="fas fa-external-link-alt"></i></a>
+                                    <a href="https://github.com/nejuaning/furiendFinder" target="__blank">Github <i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="projectContainer" data-aos="fade-right">
+                            <div class="projectsImages">
+                                <img src="./assets/crackTheCode.png" alt="">
+                        
+                            </div>
+                            <div class="projectInfo">
+                                <h4>Crack the Code</h4>
+                                <ul>
+                                    <li>JavaScript</li>
+                                    <li>jQuery</li>
+                                    <li>HTML</li>
+                                    <li>SASS</li>
+                                </ul>
+                                <p>A game inspired by the boardgame Mastermind. The player has to guess a random code in less than 10 attempts and before times runs out. The user must use the feedback given by he computer after each guess in order to try to crack the code. Made using javaScript and jQuery.
+                                </p>
+                                <div>
+                                    <a href="https://jjacaitu.github.io/juanAcaiturriProjectThree/" target="__blank">Live <i class="fas fa-external-link-alt"></i></a>
+                                    <a href="https://github.com/jjacaitu/juanAcaiturriProjectThree" target="__blank">Github <i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="projectContainer" data-aos="fade-left">
+                            <div class="projectsImages">
+                                <img src="./assets/pokemonBlackJackDesktop.png" alt="">
+                        
+                            </div>
+                            <div class="projectInfo">
+                                <h4>Pokemon Blackjack</h4>
+                                <ul>
+                                    <li>Mob Programming</li>
+                                    <li>React</li>
+                                    <li>RestFul API</li>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                </ul>
+                                <p>
+                                    Built with my friends Emma Fattori and Steve Seki. A game that mixes Pokemon and Blackjack! play the 1 player or 2 player game and try to win in order to beat the other pokemon and see your pokemon evolve!
+                                </p>
+                                <div>
+                                    <a href="https://pokemonblackjack.github.io/pokemonBlackJack/" target="__blank">Live <i class="fas fa-external-link-alt"></i></a>
+                                    <a href="https://github.com/pokemonBlackJack/pokemonBlackJack" target="__blank">Github <i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="projectContainer" data-aos="fade-right">
+                            <div class="projectsImages">
+                                <img src="./assets/ThunderStadiumDesktop.png" alt="">
+                        
+                            </div>
+                            <div class="projectInfo">
+                                <h4>Thunder Force Stadium</h4>
+                                <ul>
+
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                </ul>
+                                <p>A fully responsive and accesible PSD conversion of a design I really loved, using only floats, no flexbox or grid allowed.
+                                </p>
+                                <div>
+                                    <a href="https://jjacaitu.github.io/juan-acaiturri-project-one/#" target="__blank">Live <i class="fas fa-external-link-alt"></i></a>
+                                    <a href="https://github.com/jjacaitu/juan-acaiturri-project-one" target="__blank">Github <i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+        <section class="skills" id="skills">
+            <div class="wrapper">
+                <div class="skillsMain" data-aos="fade-up">
+                    <h2>Skills</h2>
+                    <h3>My tools</h3>
+                    <ul>
+                        <li data-aos="zoom-out" data-aos-delay="50"><i class="devicon-html5-plain"></i>HTML5</li>
+                        <li data-aos="zoom-out" data-aos-delay="100"><i class="devicon-css3-plain"></i>CSS3</li>
+                        <li data-aos="zoom-out" data-aos-delay="150"><i class="devicon-sass-original"></i>SASS</li>
+                        <li data-aos="zoom-out" data-aos-delay="200"><i class="devicon-javascript-plain"></i>JavaScript</li>
+                        <li data-aos="zoom-out" data-aos-delay="250"><i class="devicon-jquery-plain-wordmark"></i>jQuery</li>
+                        <li data-aos="zoom-out" data-aos-delay="300"><i class="devicon-react-original"></i>React</li>
+                        <li data-aos="zoom-out" data-aos-delay="350"><i class="fas fa-database"></i>APIS</li>
+                        <li data-aos="zoom-out" data-aos-delay="400"><i class="devicon-git-plain"></i>Git</li>
+                        <li data-aos="zoom-out" data-aos-delay="450"><i class="devicon-github-plain"></i>GitHub</li>
+                        <li data-aos="zoom-out" data-aos-delay="500"><img src="./assets/icon-firebase.svg" alt="">Firebase</li>
+                        <li data-aos="zoom-out" data-aos-delay="550"><img src="./assets/icon-w3c.svg" alt="">Web Accesibility</li>
+                        <li data-aos="zoom-out" data-aos-delay="600"><img src="./assets/icon-tablet-phone-and-browser.svg" alt="">Responsive Design</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+        <section class="contactMe" id="contactMe" >
+            <div class="wrapper">
+                <div class="contactMeMain" data-aos="fade-up">
+                    <h2>Contact me</h2>
+                    <h3>Say hi!</h3>
+                    <div class="contactFormAndInfo">
+                        <ul class="contactInfo">
+                            <li><a href=""><i class="fas fa-envelope"></i></a></li>
+                            <li><a href="#"><i class="fab fa-github-square"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                        </ul>
+                        <form action="">
+                            <label class="visuallyHidden" for="name">Name: </label>
+                            <input type="text" id="name" placeholder="Name:">
+                            <label class="visuallyHidden" for="email">Enter email:</label>
+                            <input type="email" placeholder="Email:">
+                            <label class="visuallyHidden" for="message">Enter message</label>
+                            <textarea placeholder="Message:" name="" id="" cols="30" rows="10"></textarea>
+                            <button type="submit">Send!<i class="fab fa-telegram-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="wrapper">
+            <p>Copyright © 2019 Juan Acaiturri-Villa</p>
+
+        </div>
+    </footer>
+    
+</body>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="./script.js"></script>
+</html>

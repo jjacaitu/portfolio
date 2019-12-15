@@ -1,0 +1,63 @@
+// Variables
+
+$mainColor:#222222;
+$secondaryColor:#C35B45;
+$thirdColor: #F14D29;
+$textColor: #FFFFFF;
+$secondTextColor: #8E8E8E;
+
+$mainFont: 'Roboto', sans-serif;
+$secondaryFont: 'Montserrat Alternates', sans-serif;
+$thirdFont: 'Montserrat', sans-serif;
+
+:root {
+    --primaryColor: #F14D29;
+    --secondaryColor: #bbc0ce;
+    --fontColor: #fafaff;
+    --buttonColor: #fafaff;
+    --buttonIcon: #f14d29;
+    --bgColor: #161625;
+    --secondBgColor:#19192e;
+    --middleColor: #bbc0ce;
+    --circleColor: #00FFBA;
+}
+
+[data-theme="light"] {
+    --primaryColor: #026983;
+    --secondaryColor: #21215a;
+    --fontColor: #222222;
+    --buttonColor: #026983;
+    --buttonIcon: #fafaff;
+    --bgColor:  rgb(244, 244, 245);
+    --secondBgColor:white;
+    --middleColor: #19192e;
+    --circleColor: #21215a;
+}
+
+
+
+// Mixins for media queries
+
+@mixin mq-small-desktop {
+    @media (max-width:1150px) {
+        @content
+    }
+};
+
+@mixin mq-tablet {
+    @media (max-width:950px) {
+        @content
+    }
+};
+
+@mixin mq-phone {
+    @media (max-width:600px) {
+        @content
+    }
+};
+
+@mixin mq-height {
+    @media (max-height:650px){
+        @content
+    }
+};
