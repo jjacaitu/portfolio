@@ -789,7 +789,11 @@ section {
             display: none;
             text-align: center;
             position: absolute;
-            bottom: -65px;
+            bottom: -40px;
+
+            @include mq-phone {
+                bottom: -65px;
+            }
         }
         
         input, textarea {

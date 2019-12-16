@@ -1241,7 +1241,13 @@ section {
   display: none;
   text-align: center;
   position: absolute;
-  bottom: -65px;
+  bottom: -40px;
+}
+
+@media (max-width: 550px) {
+  .contactFormAndInfo form .submitResponse {
+    bottom: -65px;
+  }
 }
 
 .contactFormAndInfo form input, .contactFormAndInfo form textarea {
