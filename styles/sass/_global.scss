@@ -520,6 +520,10 @@ section {
     align-items: flex-start;
     width: 100%;
 
+    button {
+        display: none;
+    }
+
 }
 
 .aboutMeContainer {

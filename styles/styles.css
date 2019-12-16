@@ -878,6 +878,10 @@ section {
   width: 100%;
 }
 
+.aboutMeInfo button {
+  display: none;
+}
+
 .aboutMeContainer {
   display: -webkit-box;
   display: -ms-flexbox;
