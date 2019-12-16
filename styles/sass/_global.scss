@@ -86,7 +86,6 @@ h2 {
     position: relative;
     font-size: 1rem;
     text-align: start;
-    // width: 100%;
    
 }
 
@@ -103,8 +102,6 @@ h2:after {
     @include mq-small-tablet {
         width: 20%;
         min-width: 50px;
-        // right: 0;
-        // margin-top: 40px;
     }
 }
 
@@ -116,7 +113,6 @@ h3 {
 
 h4 {
     position: relative;
-    // background-color: var(--primaryColor);
     padding: 5px 10px;
     border-radius: 20px;
     color: var(--fontColor);
@@ -349,22 +345,20 @@ input.menu:checked + label.menu + ul {
     justify-content: flex-end;
     align-items: flex-start;
     align-self: flex-end;
+    width: 23%;
     
-    // div {
-        width: 23%;
-        
-        @include mq-small-desktop {
-            width: 40%;
-        }
-        
-        @include mq-small-tablet {
-            width: 100%;
-            margin-top: 15px;
-        }
-        
-        p {
-            width: 100%;
-        }
+    @include mq-small-desktop {
+        width: 40%;
+    }
+    
+    @include mq-small-tablet {
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    p {
+        width: 100%;
+    }
 }
     
 .chevronContainer {
@@ -455,9 +449,7 @@ section {
 }
 
 .aboutMe,.skills{
-    background-color: var(--secondBgColor);
-    // color: var(--bgColor);
-    
+    background-color: var(--secondBgColor);    
 
 }
 
@@ -483,46 +475,6 @@ section {
         z-index:90; 
     }
 
-    // .imageContainer {
-    //     width: 300px;
-    //     // height: 220px;
-    //     margin: 40px;
-    //     position: relative;
-
-    //     img {
-    //         background-color: #fafaff;
-    //     }
-
-    //     &::after{
-    //         border: 200px solid transparent;
-    //         border-right-color:  var(--secondaryColor);
-            
-    //         border-bottom: 0;
-    //         width: 0;
-            
-    //         content: "";
-    //         position: absolute;
-    //         right: -20px;
-    //         bottom: -20px;
-    //     }
-        
-    //      &::before{
-    //         border: 180px solid transparent;
-    //         border-right-color:  var(--primaryColor);
-    //         z-index: 2;
-            
-    //         border-bottom: 0;
-    //         bottom: 0px;
-    //         width: 0;
-    //         content: "";
-    //         position: absolute;
-    //         right: -20px;
-    //         bottom: -20px;
-    //     }
-
-    // }
-
-    
     
     button {
         border: none;
@@ -573,7 +525,6 @@ section {
 .aboutMeContainer {
     display: flex;
     justify-content: center;
-    // flex-direction: column;
     align-items: center;
 }
 
@@ -714,7 +665,6 @@ section {
         display: flex;
         align-items: center;
         justify-content: space-around;
-        // width: 50%;
 
         a:first-child {
             margin-right: 10px;
@@ -844,11 +794,13 @@ section {
         }
 
         input:focus {
-            border-bottom: solid 2px var(--buttonColor);
+            border-bottom: solid 2px var(--fontColor);
+            transform: scale(1.05);
         }
 
         textarea:focus {
-            border: solid 2px var(--buttonColor);
+            border: solid 2px var(--fontColor);
+            transform: scale(1.05);
         }
 
 

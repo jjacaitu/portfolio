@@ -1243,11 +1243,15 @@ section {
 }
 
 .contactFormAndInfo form input:focus {
-  border-bottom: solid 2px var(--buttonColor);
+  border-bottom: solid 2px var(--fontColor);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .contactFormAndInfo form textarea:focus {
-  border: solid 2px var(--buttonColor);
+  border: solid 2px var(--fontColor);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .contactFormAndInfo form textarea {

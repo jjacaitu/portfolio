@@ -46,7 +46,7 @@
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contactMe">Contact me</a></li>
                 </ul>
-                <input class="switch"  type="checkbox" name="" id="darkLightSwitch">
+                <input class="switch"  type="checkbox" name="darkLightSwitch" id="darkLightSwitch">
                 <label class="switch" aria-label="switch to toggle between dark and light theme" for="darkLightSwitch"></label>
             </nav>
             <div class="headerMain">
@@ -103,9 +103,6 @@
     
                         </div>
 
-                        <!-- <div class="imageContainer">
-                            <img src="./image.png" alt="">
-                        </div> -->
                     </div>
                     
                 </div>
@@ -268,11 +265,11 @@
                         </ul>
                         <form action="https://formspree.io/mknowerr" method="POST">
                             <label class="visuallyHidden" for="name">Name: </label>
-                            <input type="text" id="name" placeholder="Name:" name="name">
+                            <input type="text" id="name" placeholder="Name:" name="name" required>
                             <label class="visuallyHidden" for="email">Enter email:</label>
-                            <input type="email" id="email" name="email" placeholder="Email:">
+                            <input type="email" id="email" name="email" placeholder="Email:" required>
                             <label class="visuallyHidden" for="message">Enter message</label>
-                            <textarea placeholder="Message:" name="message" id="message" cols="30" rows="10"></textarea>
+                            <textarea placeholder="Message:" name="message" id="message" cols="30" rows="10" required></textarea>
                             <button type="submit">Send!<i class="fab fa-telegram-plane" aria-hidden="true"></i></button>
                             <p class="submitResponse">Thank your for your message! Your message has been sent.</p>
                         </form>
@@ -289,8 +286,7 @@
     </footer>
     
 </body>
-<script src='https://code.jquery.com/jquery-3.2.1.min.js'
-    integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
+<script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="./script.js"></script>
 </html>
