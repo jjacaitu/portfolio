@@ -239,10 +239,6 @@ i {
     height: 20px;
     border-radius: 20px;
     cursor: pointer;
-
-    &:focus {
-        color: red;
-    }
     
     &::after{
         content: "";
@@ -264,6 +260,11 @@ input[type="checkbox"] {
 
 input.switch:focus + label.switch::after {
     background-color: var(--fontColor);
+    transform: scale(1.2);
+}
+
+input.switch:focus + label.switch {
+    transform: scale(1.2);
 }
 
 input.switch:checked + label.switch::after {
@@ -388,9 +389,14 @@ input.menu:checked + label.menu + ul {
     
 }
 
-.chevronContainer:focus .chevronDown {
-        color: var(--primaryColor);
-    }
+.chevronContainer:focus .chevronDown, .chevronContainer:hover .chevronDown {
+    color: var(--primaryColor);  
+}
+
+.chevronContainer:focus {
+    transform: scale(1.1);
+    text-shadow: 0px 0px 4px var(--circleColor);
+}
 
 .triangle {
     border: 80px solid transparent;
