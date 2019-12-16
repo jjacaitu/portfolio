@@ -1214,12 +1214,21 @@ section {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 80%;
+  position: relative;
+  padding-bottom: 40px;
 }
 
 @media (max-width: 700px) {
   .contactFormAndInfo form {
     width: 100%;
   }
+}
+
+.contactFormAndInfo form .submitResponse {
+  display: none;
+  text-align: center;
+  position: absolute;
+  bottom: -65px;
 }
 
 .contactFormAndInfo form input, .contactFormAndInfo form textarea {
@@ -1229,6 +1238,16 @@ section {
   color: var(--fontColor);
   border: none;
   border-bottom: solid 2px var(--primaryColor);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.contactFormAndInfo form input:focus {
+  border-bottom: solid 2px var(--buttonColor);
+}
+
+.contactFormAndInfo form textarea:focus {
+  border: solid 2px var(--buttonColor);
 }
 
 .contactFormAndInfo form textarea {

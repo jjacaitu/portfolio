@@ -818,9 +818,18 @@ section {
         display: flex;
         flex-direction: column;
         width: 80%;
+        position: relative;
+        padding-bottom: 40px;
 
         @include mq-small-tablet {
             width: 100%;
+        }
+
+        .submitResponse {
+            display: none;
+            text-align: center;
+            position: absolute;
+            bottom: -65px;
         }
         
         input, textarea {
@@ -828,11 +837,21 @@ section {
             padding: 20px;
             background-color: var(--bgColor);
             color: var(--fontColor);
-            // border-radius: 20px;
             border: none;
             border-bottom: solid 2px var(--primaryColor);
+            transition: all 0.5s;
             
         }
+
+        input:focus {
+            border-bottom: solid 2px var(--buttonColor);
+        }
+
+        textarea:focus {
+            border: solid 2px var(--buttonColor);
+        }
+
+
         
         textarea {
             margin-top: 20px;

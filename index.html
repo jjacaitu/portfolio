@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
     <link rel="apple-touch-icon" sizes="57x57" href="./assets/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="./assets/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="./assets/apple-icon-72x72.png">
@@ -72,7 +71,7 @@
             <div class="triangle"></div>
             <div class="circle"></div>
             <div class="bigCircle"></div>
-            <a class="chevronContainer" href="#aboutMe" tabindex="0">
+            <a class="chevronContainer" href="#aboutMe" tabindex="0" aria-label="Go to about me section">
                 
                 <i class="fas fa-chevron-down chevronDown"></i>
                 <i class="fas fa-chevron-down chevronDown"></i>
@@ -262,19 +261,20 @@
                     <h3>Say hi!</h3>
                     <div class="contactFormAndInfo">
                         <ul class="contactInfo">
-                            <li><a href="mailto:juan@juancodes.com" aria-label="Send email to Juan Acaiturri-Villa"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
+                            <li><a href="mailto:juan.acaiturri@hotmail.com" aria-label="Send email to Juan Acaiturri-Villa"><i class="fas fa-envelope" aria-hidden="true"></i></a></li>
                             <li><a href="https://github.com/jjacaitu" aria-label="Go to Juan's GitHub profile"><i class="fab fa-github-square" aria-hidden="true"></i></a></li>
                             <li><a href="https://twitter.com/jjacaiturri" aria-label="Go to Juan's Twitter profile"><i class="fab fa-twitter-square" aria-hidden="true"></i></a></li>
                             <li><a href="https://www.linkedin.com/in/juan-acaiturri-villa" aria-label="Go to Juan's Linkedin profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
                         </ul>
-                        <form action="">
+                        <form action="https://formspree.io/mknowerr" method="POST">
                             <label class="visuallyHidden" for="name">Name: </label>
-                            <input type="text" id="name" placeholder="Name:">
+                            <input type="text" id="name" placeholder="Name:" name="name">
                             <label class="visuallyHidden" for="email">Enter email:</label>
-                            <input type="email" placeholder="Email:">
+                            <input type="email" id="email" name="email" placeholder="Email:">
                             <label class="visuallyHidden" for="message">Enter message</label>
-                            <textarea placeholder="Message:" name="" id="" cols="30" rows="10"></textarea>
+                            <textarea placeholder="Message:" name="message" id="message" cols="30" rows="10"></textarea>
                             <button type="submit">Send!<i class="fab fa-telegram-plane" aria-hidden="true"></i></button>
+                            <p class="submitResponse">Thank your for your message! Your message has been sent.</p>
                         </form>
                     </div>
                 </div>
@@ -289,7 +289,8 @@
     </footer>
     
 </body>
-<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src='https://code.jquery.com/jquery-3.2.1.min.js'
+    integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="./script.js"></script>
 </html>
