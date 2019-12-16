@@ -10,7 +10,10 @@ body {
     font-family: $mainFont;
     color: var(--fontColor);
     transition: all 0.5s;
-    overflow-x: hidden;  
+    
+    @include mq-tablet {
+        overflow-x: hidden;
+    } 
     
 }
 

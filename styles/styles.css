@@ -292,7 +292,12 @@ body {
   color: var(--fontColor);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  overflow-x: hidden;
+}
+
+@media (max-width: 800px) {
+  body {
+    overflow-x: hidden;
+  }
 }
 
 img {
