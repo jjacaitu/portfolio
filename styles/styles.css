@@ -187,7 +187,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   --buttonIcon: #f14d29;
   --bgColor: #161625;
   --secondBgColor:#19192e;
-  --middleColor: #bbc0ce;
+  --middleColor: #F14D29;
   --circleColor: #00FFBA;
 }
 
@@ -199,7 +199,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   --buttonIcon: #fafaff;
   --bgColor:  rgb(226, 226, 226);
   --secondBgColor:rgb(245, 245, 245);
-  --middleColor: #19192e;
+  --middleColor: #21215a;
   --circleColor: #21215a;
 }
 
@@ -858,8 +858,8 @@ section {
 
 .aboutMeMain button:hover, .aboutMeMain button:focus, .projectsMain button:hover, .projectsMain button:focus, .skillsMain button:hover, .skillsMain button:focus, .contactMeMain button:hover, .contactMeMain button:focus {
   color: var(--bgColor);
-  -webkit-box-shadow: 0px 5px 0px 0px var(--secondaryColor);
-          box-shadow: 0px 5px 0px 0px var(--secondaryColor);
+  -webkit-box-shadow: 0px 5px 0px 0px var(--middleColor);
+          box-shadow: 0px 5px 0px 0px var(--middleColor);
   letter-spacing: 2px;
 }
 
@@ -1076,8 +1076,8 @@ section {
 .projectInfo a:hover, .projectInfo a:focus {
   color: var(--bgColor);
   letter-spacing: 2px;
-  -webkit-box-shadow: 0 5px var(--secondaryColor);
-          box-shadow: 0 5px var(--secondaryColor);
+  -webkit-box-shadow: 0 5px var(--middleColor);
+          box-shadow: 0 5px var(--middleColor);
 }
 
 .projectInfo a:hover i, .projectInfo a:focus i {

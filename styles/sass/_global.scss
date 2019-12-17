@@ -504,7 +504,7 @@ section {
 
         &:hover, &:focus {
             color:  var(--bgColor);
-            box-shadow: 0px 5px 0px 0px var(--secondaryColor);
+            box-shadow: 0px 5px 0px 0px var(--middleColor);
             letter-spacing: 2px;
            
         }
@@ -667,7 +667,7 @@ section {
         &:hover, &:focus {
             color:  var(--bgColor);           
             letter-spacing: 2px;
-            box-shadow: 0 5px var(--secondaryColor);
+            box-shadow: 0 5px var(--middleColor);
         }
 
         &:hover i, &:focus i {
