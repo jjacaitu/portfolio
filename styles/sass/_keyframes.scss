@@ -13,12 +13,12 @@
 
 @keyframes move {
     from {
-        transform: translateY(0);
+        transform: translateY(0) translateX(-50%);
         opacity: 1;
     }
 
     to {
-        transform: translateY(5px);
+        transform: translateY(5px) translateX(-50%);
         opacity: 0;
     }
 }

@@ -227,26 +227,26 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 @-webkit-keyframes move {
   from {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(0) translateX(-50%);
+            transform: translateY(0) translateX(-50%);
     opacity: 1;
   }
   to {
-    -webkit-transform: translateY(5px);
-            transform: translateY(5px);
+    -webkit-transform: translateY(5px) translateX(-50%);
+            transform: translateY(5px) translateX(-50%);
     opacity: 0;
   }
 }
 
 @keyframes move {
   from {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(0) translateX(-50%);
+            transform: translateY(0) translateX(-50%);
     opacity: 1;
   }
   to {
-    -webkit-transform: translateY(5px);
-            transform: translateY(5px);
+    -webkit-transform: translateY(5px) translateX(-50%);
+            transform: translateY(5px) translateX(-50%);
     opacity: 0;
   }
 }
@@ -447,6 +447,7 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 @media (max-width: 1100px) {
@@ -471,7 +472,7 @@ nav {
         -ms-flex-pack: center;
             justify-content: center;
     padding: 10px;
-    width: 30%;
+    width: 40%;
     background-color: var(--primaryColor);
     color: #fafaff;
     z-index: 3;
@@ -523,7 +524,7 @@ ul {
 
 @media (max-width: 550px) {
   ul li {
-    margin-bottom: 20px;
+    margin: 20px auto;
   }
 }
 
@@ -541,6 +542,16 @@ i {
   height: 20px;
   border-radius: 20px;
   cursor: pointer;
+}
+
+@media (max-width: 550px) {
+  .switch {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    -webkit-transform: translate(50%, -50%);
+            transform: translate(50%, -50%);
+  }
 }
 
 .switch::after {
@@ -562,13 +573,6 @@ input[type="checkbox"] {
 
 input.switch:focus + label.switch::after {
   background-color: var(--fontColor);
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-
-input.switch:focus + label.switch {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
 }
 
 input.switch:checked + label.switch::after {
@@ -580,13 +584,15 @@ label.menu {
   width: 50px;
   height: 50px;
   position: fixed;
-  right: 50%;
+  right: 0;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
   z-index: 4;
   border-radius: 10px;
   background-color: var(--bgColor);
   padding: 5px;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
 }
 
 @media (max-width: 550px) {
@@ -652,6 +658,12 @@ input.menu:checked + label.menu + ul {
 .headerMain i {
   margin-top: 100px;
   font-size: 2rem;
+}
+
+@media (max-width: 550px) {
+  .headerMain i {
+    margin-top: 30px;
+  }
 }
 
 .headerMain li a:focus i, .headerMain li a:hover i, .contactInfo li a:hover i, .contactInfo li a:focus i {
@@ -754,7 +766,7 @@ input.menu:checked + label.menu + ul {
 
 @media (max-width: 700px) {
   .triangle {
-    top: 60%;
+    top: 65%;
     right: 18%;
     border-top: 50px solid var(--buttonColor);
     -webkit-transform-origin: top;
@@ -774,7 +786,7 @@ input.menu:checked + label.menu + ul {
 
 @media (max-width: 700px) {
   .circle {
-    top: 60%;
+    top: 65%;
     right: 10%;
   }
 }
