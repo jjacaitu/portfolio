@@ -180,18 +180,6 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 :root {
-  --primaryColor: #F14D29;
-  --secondaryColor: #bbc0ce;
-  --fontColor: #fafaff;
-  --buttonColor: #fafaff;
-  --buttonIcon: #f14d29;
-  --bgColor: #161625;
-  --secondBgColor:#19192e;
-  --middleColor: #F14D29;
-  --circleColor: #00FFBA;
-}
-
-[data-theme="light"] {
   --primaryColor: #026983;
   --secondaryColor: #21215a;
   --fontColor: #222222;
@@ -201,6 +189,18 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   --secondBgColor:rgb(245, 245, 245);
   --middleColor: #21215a;
   --circleColor: #21215a;
+}
+
+[data-theme="dark"] {
+  --primaryColor: #F14D29;
+  --secondaryColor: #bbc0ce;
+  --fontColor: #fafaff;
+  --buttonColor: #fafaff;
+  --buttonIcon: #f14d29;
+  --bgColor: #161625;
+  --secondBgColor:#19192e;
+  --middleColor: #F14D29;
+  --circleColor: #00FFBA;
 }
 
 @-webkit-keyframes rotate {
@@ -229,12 +229,10 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   from {
     -webkit-transform: translateY(0) translateX(-50%);
             transform: translateY(0) translateX(-50%);
-    opacity: 1;
   }
   to {
     -webkit-transform: translateY(5px) translateX(-50%);
             transform: translateY(5px) translateX(-50%);
-    opacity: 0;
   }
 }
 
@@ -242,12 +240,10 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   from {
     -webkit-transform: translateY(0) translateX(-50%);
             transform: translateY(0) translateX(-50%);
-    opacity: 1;
   }
   to {
     -webkit-transform: translateY(5px) translateX(-50%);
             transform: translateY(5px) translateX(-50%);
-    opacity: 0;
   }
 }
 
@@ -535,17 +531,17 @@ i {
   transition: all 0.5s;
 }
 
-.switch {
-  position: relative;
-  width: 35px;
-  border: solid 2px var(--primaryColor);
-  height: 20px;
-  border-radius: 20px;
-  cursor: pointer;
+.switchContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (max-width: 550px) {
-  .switch {
+  .switchContainer {
     position: absolute;
     top: 50%;
     right: 50%;
@@ -554,7 +550,21 @@ i {
   }
 }
 
-.switch::after {
+.switchContainer i:last-child {
+  padding-left: 13px;
+}
+
+label.switch {
+  position: relative;
+  width: 35px;
+  border: solid 2px var(--primaryColor);
+  height: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: block;
+}
+
+label.switch::after {
   content: "";
   border-radius: 50%;
   background-color: var(--primaryColor);
@@ -643,7 +653,7 @@ input.menu:checked + label.menu + ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 600px;
+  min-height: 80vh;
 }
 
 @media (max-width: 700px) {
@@ -689,6 +699,7 @@ input.menu:checked + label.menu + ul {
   -ms-flex-item-align: end;
       align-self: flex-end;
   width: 23%;
+  min-width: 200px;
 }
 
 @media (max-width: 1100px) {
@@ -700,7 +711,7 @@ input.menu:checked + label.menu + ul {
 @media (max-width: 700px) {
   .headerInfo {
     width: 100%;
-    margin-top: 15px;
+    margin-top: 120px;
   }
 }
 
@@ -842,7 +853,7 @@ section {
   z-index: 90;
 }
 
-.aboutMeMain button, .projectsMain button, .skillsMain button, .contactMeMain button {
+.aboutMeMain button, .aboutMeMain .aboutMeInfo a, .projectsMain button, .projectsMain .aboutMeInfo a, .skillsMain button, .skillsMain .aboutMeInfo a, .contactMeMain button, .contactMeMain .aboutMeInfo a {
   border: none;
   padding: 10px 20px;
   background-color: var(--buttonColor);
@@ -856,14 +867,14 @@ section {
   transition: all 0.5s;
 }
 
-.aboutMeMain button:hover, .aboutMeMain button:focus, .projectsMain button:hover, .projectsMain button:focus, .skillsMain button:hover, .skillsMain button:focus, .contactMeMain button:hover, .contactMeMain button:focus {
+.aboutMeMain button:hover, .aboutMeMain button:focus, .aboutMeMain .aboutMeInfo a:hover, .aboutMeMain .aboutMeInfo a:focus, .projectsMain button:hover, .projectsMain button:focus, .projectsMain .aboutMeInfo a:hover, .projectsMain .aboutMeInfo a:focus, .skillsMain button:hover, .skillsMain button:focus, .skillsMain .aboutMeInfo a:hover, .skillsMain .aboutMeInfo a:focus, .contactMeMain button:hover, .contactMeMain button:focus, .contactMeMain .aboutMeInfo a:hover, .contactMeMain .aboutMeInfo a:focus {
   color: var(--bgColor);
   -webkit-box-shadow: 0px 5px 0px 0px var(--middleColor);
           box-shadow: 0px 5px 0px 0px var(--middleColor);
   letter-spacing: 2px;
 }
 
-.aboutMeMain button i, .projectsMain button i, .skillsMain button i, .contactMeMain button i {
+.aboutMeMain button i, .aboutMeMain .aboutMeInfo a i, .projectsMain button i, .projectsMain .aboutMeInfo a i, .skillsMain button i, .skillsMain .aboutMeInfo a i, .contactMeMain button i, .contactMeMain .aboutMeInfo a i {
   color: var(--buttonIcon);
   font-size: 1rem;
   padding-left: 5px;

@@ -11,18 +11,6 @@ $secondaryFont: 'Montserrat Alternates', sans-serif;
 $thirdFont: 'Montserrat', sans-serif;
 
 :root {
-    --primaryColor: #F14D29;
-    --secondaryColor: #bbc0ce;
-    --fontColor: #fafaff;
-    --buttonColor: #fafaff;
-    --buttonIcon: #f14d29;
-    --bgColor: #161625;
-    --secondBgColor:#19192e;
-    --middleColor: #F14D29;
-    --circleColor: #00FFBA;
-}
-
-[data-theme="light"] {
     --primaryColor: #026983;
     --secondaryColor: #21215a;
     --fontColor: #222222;
@@ -32,6 +20,18 @@ $thirdFont: 'Montserrat', sans-serif;
     --secondBgColor:rgb(245, 245, 245);
     --middleColor: #21215a;
     --circleColor: #21215a;
+}
+
+[data-theme="dark"] {
+    --primaryColor: #F14D29;
+    --secondaryColor: #bbc0ce;
+    --fontColor: #fafaff;
+    --buttonColor: #fafaff;
+    --buttonIcon: #f14d29;
+    --bgColor: #161625;
+    --secondBgColor:#19192e;
+    --middleColor: #F14D29;
+    --circleColor: #00FFBA;
 }
 
 

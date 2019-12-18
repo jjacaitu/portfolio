@@ -233,20 +233,30 @@ i {
     
 }
 
-.switch {
-    position: relative;
-    width: 35px;
-    border: solid 2px var(--primaryColor);
-    height: 20px;
-    border-radius: 20px;
-    cursor: pointer;
-
+.switchContainer {
+    display: flex;
+    align-items: center;
+    
     @include mq-phone {
         position: absolute;
         top: 50%;
         right: 50%;
         transform: translate(50%, -50%);
     }
+    i:last-child {
+        padding-left: 13px;
+    }
+}
+
+label.switch {
+    position: relative;
+    width: 35px;
+    border: solid 2px var(--primaryColor);
+    height: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: block;
+
     
     &::after{
         content: "";
@@ -328,7 +338,7 @@ input.menu:checked + label.menu + ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 600px;
+    min-height: 80vh;
     @include mq-small-tablet {
         flex-direction: column;
     }
@@ -357,6 +367,7 @@ input.menu:checked + label.menu + ul {
     align-items: flex-start;
     align-self: flex-end;
     width: 23%;
+    min-width: 200px;
     
     @include mq-small-desktop {
         width: 40%;
@@ -364,7 +375,7 @@ input.menu:checked + label.menu + ul {
     
     @include mq-small-tablet {
         width: 100%;
-        margin-top: 15px;
+        margin-top: 120px;
     }
     
     p {
@@ -492,7 +503,7 @@ section {
     }
 
     
-    button {
+    button, .aboutMeInfo a {
         border: none;
         padding: 10px 20px;
         background-color: var(--buttonColor);
